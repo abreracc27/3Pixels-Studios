@@ -1,0 +1,39 @@
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light px-3">
+			<a class="navbar-brand" href="../index.php"><img id="navbar-logo" src="../images/FINAL-LOGO.png"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" disabled>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav ms-auto mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="admin.php"><button id="home" type="button" name="home">HOME</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../public/index.php" target="_blank"><button id="home" type="button" name="home">PUBLIC</button></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"><button type="button" id="logout" data-target="#modal-logout" data-toggle="modal">LOGOUT</button></a>
+					</li>					
+				</ul>
+				<div class="modal fade" id="modal-logout" tabindex="-1"> 
+					<div class="modal-dialog"> 
+						<div class="modal-content"> 
+							<div class="modal-header"> 
+									<span id="table-header-text">LOGOUT ACCOUNT</span>
+									<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+							</div> 
+							<div class="modal-body"> 
+								<div class="frm-text">ARE YOU SURE YOU WANT TO LOGOUT?</div>
+							</div> 
+							<div class="modal-footer"> 
+								<a href="controllerUserData.php?logout=1"><input type="button" id="logout2" value="LOGOUT"></a>
+							</div> 								 
+						</div> 
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	

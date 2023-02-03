@@ -1,0 +1,623 @@
+html{
+	height: 100%;
+	min-width: 100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #242424 !important;
+}
+
+@font-face {
+    font-family: 'maven_problack';
+    src: url('../fonts/mavenpro-black-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+}
+
+@font-face {
+    font-family: 'maven_probold';
+    src: url('../fonts/mavenpro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+}
+
+@font-face {
+    font-family: 'maven_promedium';
+    src: url('../fonts/mavenpro-medium-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+
+}
+
+@font-face {
+    font-family: 'maven_proregular';
+    src: url('../fonts/mavenpro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+
+}
+
+#center-header-logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%; 
+	height: 50%;
+	margin-top: 5%;
+}
+
+#navbar-logo{
+    width: 100px;
+	height: 50px;
+}
+
+.navbar{
+	min-width: 100%;
+	background: #3b3b3b;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+#table-header-text{
+	color: #d4b37a;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 25px;
+}
+
+#table-body-text{
+	font-size: 13px;
+	color: white;
+}
+
+#top-line-divider{
+	border-top: solid thin #dab678;
+	padding-top: 20px;
+	font-size: 13px;
+}
+
+form{
+	text-align: left;
+	font-family: 'maven_probold';
+}
+
+#name, #email, #phone, #type, #venue, #date, #time, #qone, #qtwo, #qthree, #qfour, #qfive{
+	font-size: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 75px;
+	width: 100%;
+	background-color: transparent;
+	border: solid thin gray;
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+option{
+	color: black;
+}
+
+#message{
+	font-size: 15px;
+	width: 100%;
+	height: 150px;
+	padding: 15px;
+	resize: none;
+	background-color: transparent;
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+
+#submit-appointment{
+	height: 70px;
+	width: 100%;
+	color: white;
+	float: right;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+}
+
+#submit-appointment:hover{
+  	background-color: #927748;
+}
+
+/* button gradient color */
+#back{
+	height: 60px;
+	width: 100%;
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+
+	
+
+	/*https://codepen.io/miraviolet/pen/ZobWEg*/
+}
+
+/* button white color */
+#back:hover{
+	background-color:#927748;
+}
+
+#home, #about, #contact, #faq, #rate{
+	height: 40px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	transition: 0.4s;
+	background-color: transparent;
+	width: 100%;
+	color: #d4b37a;
+
+	/*https://codepen.io/miraviolet/pen/ZobWEg*/
+}
+
+#navbarDropdown1{
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	transition: 0.3s;
+	background-color: transparent;
+	width: 100%;
+	color: #d4b37a;
+	text-align: center;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#home:hover, #about:hover, #portfolio:hover, #contact:hover, #faq:hover, #rate:hover{
+	color: white;
+	box-shadow: none;
+	outline: none;
+}
+
+
+.g-recaptcha{
+	float: right;
+}
+
+#error-message-captcha{
+	font-size: 13px;
+	color: #c73c3c;
+	float: right;
+}
+
+footer{
+	width: 100%;
+	background: #3b3b3b;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+	text-align: center;
+
+	margin-top: auto;
+}
+
+.footer-msg{
+	font-family: 'maven_probold';
+	font-size: 15px;
+	color: #d4b37a;
+}
+
+#footer{
+	display: inline-block;
+	margin: 10px;
+	font-family: 'maven_probold';
+	font-size: 13px;
+}
+
+
+#footer-link:link{
+	text-decoration: none;
+	color: white;
+	font-size: 15px;
+}
+
+#footer-link:visited {
+	text-decoration: none;
+	color: white;
+}
+  
+#footer-link:hover{
+	color: white;
+	text-decoration: none;
+}
+
+#footer-link:active {
+	color: white;
+	text-decoration: underline;
+}
+
+#members{
+	font-family: 'maven_probold';
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#userform{
+	font-family: 'maven_probold';
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.submitted{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#questions{
+	font-family: 'maven_probold';
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.mem_title{
+	color: #d4b37a;
+	font-size: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+}
+
+.mem_name{
+	color: #d4b37a;
+	font-size: 27px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+}
+
+.mem_desc{
+	text-align: justify;
+	color: white;
+	font-size: 13px;
+	font-family: 'maven_proregular';
+}
+
+.index_name{
+	color: #d4b37a;
+	font-size: 27px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: left;
+}
+
+.mem_pos{
+	font-size: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	color: white;
+}
+
+.index_desc{
+	font-size: 13px;
+	text-align: justify;
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+.index_link{
+	color: #d4b37a !important; 
+	transition: 0.4s;
+	text-decoration: none;
+}
+
+.index_link:hover{
+	margin-left: 10px;
+}
+
+#radiob li{
+    list-style-type: none;
+}
+
+.accordion {
+	background-color: transparent;
+	color: #d4b37a;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: solid thin gray;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+}
+  
+.active, .accordion:hover {
+	background: #3b3b3b;
+	outline: none;
+}
+
+.accordion:after {
+	content: '\002B';
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+  
+.accordion.active::after{
+	content: "\2212";
+}
+  
+.panel {
+	padding: 0 18px;
+	background-color: transparent;
+	border: solid thin gray;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	color: white;
+	font-family: 'maven_proregular';
+	font-size: 13px;
+}
+
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: white;
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+.frm-text, label{
+	color: white;
+}
+
+.submitted-text{
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+.alert{
+	margin-bottom: 0px !important;
+	position: absolute !important;
+	top: 30%;
+	left: 0;
+	right: 0;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+	z-index: 1;
+}
+
+.alert-danger{
+	font-family: 'maven_probold';
+}
+
+.slides-position {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	align-self: center;
+	background-size: cover;
+	width: 70%;
+}
+
+.mySlides{
+	width: 100%;
+	height: 10%;
+}
+
+#index{
+	font-family: 'maven_probold';
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 768px){
+	#index{
+		font-family: 'maven_probold';
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.index_name{
+		font-size: 20px;
+	}
+
+	.index_link{
+		font-size: 13px;
+	}
+
+	#members{
+		width: 80%;
+	}
+
+	.mem_title{
+		font-size: 20px;
+	}
+	
+	.mem_name{
+		font-size: 22px;
+	}
+
+	#userform{
+		width: 80%;
+	}
+
+	#table-header-text{
+		font-size: 20px;
+	}
+
+	#questions{
+		width: 100%;
+	}
+
+	.submitted{
+		width: 70%;
+	}
+
+	.footer-msg{
+		font-size: 12px;
+	}
+	
+	#footer{
+		font-size: 10px;
+	}
+	
+	#footer-link:link{
+		font-size: 12px;
+	}
+}
+
+.dropdown-toggle::after {
+	transition: transform 0.15s linear; 
+}
+
+.show.dropdown .dropdown-toggle::after {
+	transform: translateY(3px);
+}	
+
+#list-nav-btn{
+	color: #b3945e;
+	text-align: center;
+	font-family: 'maven_probold';
+	transition: 0.4s;
+}
+
+#list-nav-btn:hover{
+	background-color: #b3945e;
+	color: white;
+}
+
+p{
+	margin-top: 1rem !important;
+}
+
+#media-title{
+	font-size: 25px;
+	color: #b3945e; 
+	font-family: 'maven_probold';
+	text-align: center;
+}
+
+img{
+	width: 100%;
+}
+
+.grid{
+	display: flex;
+}
+
+.grid-col{
+	flex: 1;
+	padding: 0 .1rem;
+}
+
+.grid-item{
+	padding: .2rem;
+}
+
+.grid-col--2, .grid-col--3{
+	display: none;
+}
+
+@media (min-width: 768px){
+	.container-fluid{
+		width: 90%;
+	}
+	h1{
+		margin: 3em 0;
+	}
+	.grid-col--2{
+		display: block;
+	}
+	.grid-col{
+		padding: 0 .5em;
+	}
+	#img-gallery{
+		margin-bottom: .8em;
+	}
+}
+
+@media(min-width: 1080px){
+	.grid-col--3{
+		display: block;
+	}
+	.dropdown-menu{
+		transform: translate(-25%, 0);
+	}
+}
+
+p{
+	text-align: justify;
+}
+
+
+.dropdown .dropdown-menu {
+    display: block;
+    overflow: hidden;
+
+}
+
+
+
+
+

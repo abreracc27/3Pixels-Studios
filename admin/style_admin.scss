@@ -1,0 +1,816 @@
+html{
+	height: 100%;
+	min-width: 100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #242424 !important;
+}
+
+@font-face {
+    font-family: 'maven_problack';
+    src: url('../fonts/mavenpro-black-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+}
+
+@font-face {
+    font-family: 'maven_probold';
+    src: url('../fonts/mavenpro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+}
+
+@font-face {
+    font-family: 'maven_promedium';
+    src: url('../fonts/mavenpro-medium-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+
+}
+
+@font-face {
+    font-family: 'maven_proregular';
+    src: url('../fonts/mavenpro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/mavenpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /*font from: https://www.1001fonts.com/maven-pro-font.html*/
+
+}
+
+#center-header-logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%; 
+	height: 50%;
+	margin-top: 5%;
+}
+
+#navbar-logo{
+    width: 100px;
+	height: 50px;
+}
+
+.navbar{
+	min-width: 100%;
+	background: #3b3b3b;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.table-wrapper{
+	height: 100%;
+	width: 100%;
+    overflow: auto;
+}
+
+#log_msg{
+	color: white;
+	font-size: 13px;
+}
+
+#error-message{
+	font-size: 13px;
+	color: #c73c3c;
+}
+
+#error-message2{
+	font-size: 13px;
+	color: #c73c3c;
+	float: right;
+}
+
+#success-message{
+	font-size: 13px;
+	color: #4BB543;
+}
+
+#table-header-text, #welcome{
+	color: #dab678;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 25px;
+	font-family: 'maven_probold';
+}
+
+#table-body-text{
+	font-size: 13px;
+	color: white;
+}
+
+#top-line-divider{
+	border-top: solid thin #dab678;
+	padding-top: 20px;
+	font-size: 13px;
+}
+
+#top-line-divider2{
+	border-top: solid thin #dab678;
+	padding-top: 20px;
+	font-size: 13px;
+}
+
+#bottom-line-divider2{
+	border-bottom: solid thin #d9d9d9;
+	padding-bottom: 20px;
+	font-size: 15px;
+}
+
+form{
+	font-family: 'maven_probold';
+}
+
+.frm-login{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+#admin{
+	font-family: 'maven_probold';
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+}
+
+#userform{
+	font-family: 'maven_probold';
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+@media(max-width: 768px){
+	.frm-login{
+		width: 70%;
+	}
+
+	#table-header-text, #welcome{
+		font-size: 20px;
+	}
+
+	#admin{
+		width: 80%;
+	}
+
+	#userform{
+		width: 80%;
+	}
+}
+
+
+/* input */
+#email, #password, #username, #cpassword{
+	border-radius: 5px;
+	font-size: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 50px;
+	width: 100%;
+	background-color: transparent;
+	border: solid thin gray;
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+#otp-code{
+	border-radius: 5px;
+	font-size: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 50px;
+	width: 100%;
+	background-color: transparent;
+	border: solid thin gray;
+	color: white;
+	font-family: 'maven_proregular';
+	text-align: center;
+}
+
+
+#uid{
+	border: none;
+	width: 50px;
+	font-size: 15px;
+	background-color: transparent;
+	color: white;
+	
+}
+
+#uid:focus{
+	outline: none;
+}
+
+#uname2, #uemail2, #uphone2, #utype2, #uvenue2, #udate2,#utime2{
+	font-size: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 50px;
+	width: 100%;
+	background-color: transparent;
+	border: solid thin rgb(189, 186, 186);
+	font-family: 'maven_proregular';
+	color: white;
+}
+
+#umessage2{
+	font-size: 15px;
+	width: 100%;
+	height: 150px;
+	padding: 15px;
+	resize: none;
+	background-color: transparent;
+	border: solid thin rgb(189, 186, 186);
+	font-family: 'maven_proregular';
+	color: white;
+}
+
+#uname, #uemail, #uphone, #utype, #uvenue, #udate,#utime{
+	font-size: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 75px;
+	width: 100%;
+	background-color: transparent;
+	border: solid thin gray;
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+#ufile{
+	font-size: 15px;
+	width: 100%;
+	background-color: transparent;
+	border: solid thin gray;
+	color: white;
+}
+
+#umessage{
+	font-size: 15px;
+	width: 100%;
+	height: 150px;
+	padding: 15px;
+	resize: none;
+	background-color: transparent;
+	color: white;
+	font-family: 'maven_proregular';
+}
+
+
+#form-update{
+	text-align: center;
+	height: 60px;
+	width: 100%;
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+#form-update:hover{
+	background-color: #9e8356;
+}
+
+#cancel-update{
+	text-align: center;
+	height: 60px;
+	width: 100%;
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+#cancel-update:hover{
+	background-color: #927748;
+}
+
+/* button gradient color */
+#btn-login, #btn-signup, #submit-code, #search, #cancel, #reset, #upload, #upload-back, #back{
+	height: 60px;
+	width: 100%;
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+
+	/*https://codepen.io/miraviolet/pen/ZobWEg*/
+}
+
+#add-frm, #clear, .dt-button, #list-nav, #logout2{
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	background-color: #b3945e;
+	transition: 0.4s;
+}
+
+#add-frm:hover, #clear:hover, .dt-button:hover, #list-nav:hover, #manage-img:hover, #logout2:hover{
+	background-color: #927748;
+}
+
+#list-nav{
+	float: right;
+	margin-bottom: 10px;
+}
+
+#manage-img{
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	background-color: #b3945e;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	transition: 0.4s;
+}
+
+/* button white color */
+#btn-login:hover, #btn-signup:hover, #submit-code:hover, #search:hover, #cancel:hover, #reset:hover, #back:hover, #upload:hover, #upload-back:hover{
+	background-color: #927748;
+}
+
+#clear{
+	margin-bottom: 10px;
+}
+
+#home, #logout{
+	height: 40px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	transition: 0.4s;
+
+	/*https://codepen.io/miraviolet/pen/ZobWEg*/
+}
+
+#home, #logout{
+	width: 100%;
+	color: #dab678;
+}
+
+#home:hover, #logout:hover{
+	color: white;
+	box-shadow: none;
+	outline: none;
+}
+
+#accept, #complete{
+    text-align: center;
+    height: 100%;
+    color: #4BB543;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'maven_probold';
+    padding: .5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: solid thin #4BB543;
+    cursor: pointer;
+    outline: none;
+	transition: 0.4s;
+	background-color: transparent;
+}
+
+#accept:hover, #complete:hover{
+    color: white;
+    background-color:#4BB543;
+}
+
+#edit{
+	text-align: center;
+	height: 100%;
+    color: rgb(56, 159, 228);
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border: solid thin rgb(56, 159, 228);
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+	background-color: transparent;
+}
+
+#edit:hover{
+	color: white;
+	background-color:rgb(56, 159, 228);
+}
+
+#reject{
+	text-align: center;
+	height: 100%;
+    color: red;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: solid thin red;
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+	background-color: transparent;
+}
+
+#reject:hover{
+	color: white;
+	background-color: red;
+}
+
+.float-buttons{
+	float: right;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+#tbl-login, #tbl-signup, #tbl-user-otp, #tbl-recover, #tbl-reset-code, #tbl-change, #tbl-password-changed{
+	margin-top: 30px;
+}
+
+#tbl-list, #tbl-list td{
+	font-size: 13px;
+	text-align: center;
+	border: solid thin #aaa;
+}
+
+.row-head{
+	text-align: center;
+	background-color: #b3945e;
+	color: white;
+}
+
+#data{
+	white-space: nowrap; 
+	text-align: center;
+	font-family: 'maven_proregular';
+
+}
+
+#tbl-change{
+	width: 393px;
+}
+
+#tbl-container{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 7%;
+	margin-bottom: 5%;
+	width: 70%;
+}
+
+#tbl-container2{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 65%;
+}
+
+#datatable-container{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	height: 100%;
+	padding-top: 1.5rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 3rem;
+}
+
+#datatable-container2{
+	margin-left: 17%;
+	margin-right: 17%;
+	margin-top: 5%;
+	margin-bottom: 5%;;
+	padding-top: 1.5rem;
+	padding-right: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 3rem;
+}
+
+div.dataTables_wrapper {
+    margin: 0 auto;
+}
+ 
+div.container {
+    width: 80%;
+	height: 80%;
+}
+
+.dataTables_wrapper .dataTables_length{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.modal-body{
+	font-family: 'maven_probold';
+}
+
+.modal-content{
+	background-color: #4e4848 !important;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color:white;
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.log-link:link{
+	text-decoration: none;
+}
+
+.log-link:visited {
+	text-decoration: none;
+	color: white;
+}
+  
+.log-link:hover{
+	text-decoration: none;
+}
+
+.log-link:active {
+	text-decoration: underline;
+}
+
+.frm-text{
+	color: white;
+}
+
+.dataTables_length select{
+	color: #dab678;
+}
+
+.dataTables_info{
+	color: #dab678 !important;
+}
+
+.dataTables_filter input{
+	color: white;
+	font-family: 'maven_proregular'
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+	color: white !important ;
+}
+
+option{
+	color: black;
+}
+
+label{
+	color: #dab678;
+}
+
+.admin-nav, .new-app{
+	height: 60px;
+	width: 100%;
+	color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+}
+
+.admin-nav:hover, .new-app:hover{
+	background-color: #927748;
+}
+
+
+.active{
+	background-color: #4BB543;
+
+	text-align: center;
+	height: 100%;
+    color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	outline: none;
+
+}
+
+.inactive{
+	background-color: red;
+	text-align: center;
+	height: 100%;
+    color: white;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	outline: none;
+
+}
+
+table tr td img{
+	width: 75px;
+}
+
+#img-update{
+	width: 100%;
+	height: 95%;
+}
+
+#submit-appointment{
+	height: 60px;
+	width: 100%;
+	color: white;
+	float: right;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'maven_probold';
+	padding: .5rem;
+	background-color: #b3945e;
+	border: solid thin transparent;
+	cursor: pointer;
+	outline: none;
+	transition: 0.4s;
+}
+
+#submit-appointment:hover{
+  	background-color: #9e8356;
+}
+
+.alert{
+	margin-bottom: 0px !important;
+}
+
+.revised_notif{
+	position: absolute !important;
+	top: 30%;
+	left: 0;
+	right: 0;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+	z-index: 1;
+}
+
+.alert-danger, .alert-success, .alert-warning{
+	font-family: 'maven_probold';
+}
+
+.admin-ul{
+	background-color: white;
+}
+
+#list-nav-btn{
+	color: #b3945e;
+	text-align: center;
+	transition: 0.4s;
+}
+
+#list-nav-btn:hover{
+	background-color: #b3945e;
+	color: white;
+}
+a:link{
+	text-decoration: none;
+}
+
+.dropdown-menu{
+	left: 50%;
+	right: auto;
+	text-align: center;
+	transform: translate(-50%, 0);
+  }
+
+
+
+  
+img{
+	width: 100%;
+}
+
+.grid{
+	display: flex;
+}
+
+.grid-col{
+	flex: 1;
+	padding: 0 .1rem;
+}
+
+.grid-item{
+	padding: .2rem;
+}
+
+.grid-col--2, .grid-col--3{
+	display: none;
+}
+
+@media (min-width: 768px){
+	.container-fluid{
+		width: 90%;
+	}
+	h1{
+		margin: 3em 0;
+	}
+	.grid-col--2{
+		display: block;
+	}
+	.grid-col{
+		padding: 0 .5em;
+	}
+	#img-gallery{
+		margin-bottom: .8em;
+	}
+}
+
+@media(min-width: 1080px){
+	.grid-col--3{
+		display: block;
+	}
+}
